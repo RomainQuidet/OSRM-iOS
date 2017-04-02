@@ -8,3 +8,6 @@
 	path = 3rdParty/tbb
 	url = https://github.com/01org/tbb
 
+[submodule "3rdParty/stxxl"]
+	path = 3rdParty/stxxl
+	url = https://github.com/stxxl/stxxl.git
