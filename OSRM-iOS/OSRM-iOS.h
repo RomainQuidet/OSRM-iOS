@@ -15,5 +15,5 @@ FOUNDATION_EXPORT double OSRM_iOSVersionNumber;
 FOUNDATION_EXPORT const unsigned char OSRM_iOSVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <OSRM_iOS/PublicHeader.h>
-
+#import <OSRM/Routeur.h>
 

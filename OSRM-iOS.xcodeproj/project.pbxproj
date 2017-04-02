@@ -7,9 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7AC433B41E8FDB9E00678FF8 /* OSRM-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC433AA1E8FDB9E00678FF8 /* OSRM-iOS.framework */; };
+		7AC433B41E8FDB9E00678FF8 /* OSRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC433AA1E8FDB9E00678FF8 /* OSRM.framework */; };
 		7AC433B91E8FDB9E00678FF8 /* OSRM_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433B81E8FDB9E00678FF8 /* OSRM_iOSTests.m */; };
 		7AC433BB1E8FDB9E00678FF8 /* OSRM-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AC433AD1E8FDB9E00678FF8 /* OSRM-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7AC433CC1E8FE3F800678FF8 /* douglas_peucker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433C71E8FE3F800678FF8 /* douglas_peucker.cpp */; };
+		7AC433CD1E8FE3F800678FF8 /* engine_config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433C81E8FE3F800678FF8 /* engine_config.cpp */; };
+		7AC433CE1E8FE3F800678FF8 /* hint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433C91E8FE3F800678FF8 /* hint.cpp */; };
+		7AC433CF1E8FE3F800678FF8 /* polyline_compressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433CA1E8FE3F800678FF8 /* polyline_compressor.cpp */; };
+		7AC433D01E8FE3F800678FF8 /* search_engine_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433CB1E8FE3F800678FF8 /* search_engine_data.cpp */; };
+		7AC433D21E8FE42400678FF8 /* osrm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433D11E8FE42400678FF8 /* osrm.cpp */; };
+		7AC433D51E8FE48E00678FF8 /* json_factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433D41E8FE48E00678FF8 /* json_factory.cpp */; };
+		7AC433D91E8FE4B500678FF8 /* process_memory_allocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433D71E8FE4B500678FF8 /* process_memory_allocator.cpp */; };
+		7AC433DA1E8FE4B500678FF8 /* shared_memory_allocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433D81E8FE4B500678FF8 /* shared_memory_allocator.cpp */; };
+		7AC433E11E8FE58B00678FF8 /* assemble_overview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433DC1E8FE58B00678FF8 /* assemble_overview.cpp */; };
+		7AC433E21E8FE58B00678FF8 /* assemble_route.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433DD1E8FE58B00678FF8 /* assemble_route.cpp */; };
+		7AC433E31E8FE58B00678FF8 /* assemble_steps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433DE1E8FE58B00678FF8 /* assemble_steps.cpp */; };
+		7AC433E41E8FE58B00678FF8 /* lane_processing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433DF1E8FE58B00678FF8 /* lane_processing.cpp */; };
+		7AC433E51E8FE58B00678FF8 /* post_processing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433E01E8FE58B00678FF8 /* post_processing.cpp */; };
+		7AC433E71E8FE5AC00678FF8 /* engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433E61E8FE5AC00678FF8 /* engine.cpp */; };
+		7AC433EF1E8FE5DA00678FF8 /* match.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433E91E8FE5DA00678FF8 /* match.cpp */; };
+		7AC433F01E8FE5DA00678FF8 /* nearest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433EA1E8FE5DA00678FF8 /* nearest.cpp */; };
+		7AC433F11E8FE5DA00678FF8 /* table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433EB1E8FE5DA00678FF8 /* table.cpp */; };
+		7AC433F21E8FE5DA00678FF8 /* tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433EC1E8FE5DA00678FF8 /* tile.cpp */; };
+		7AC433F31E8FE5DA00678FF8 /* trip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433ED1E8FE5DA00678FF8 /* trip.cpp */; };
+		7AC433F41E8FE5DA00678FF8 /* viaroute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433EE1E8FE5DA00678FF8 /* viaroute.cpp */; };
+		7AC433FC1E8FE61600678FF8 /* alternative_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433F61E8FE61600678FF8 /* alternative_path.cpp */; };
+		7AC433FD1E8FE61600678FF8 /* direct_shortest_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433F71E8FE61600678FF8 /* direct_shortest_path.cpp */; };
+		7AC433FE1E8FE61600678FF8 /* many_to_many.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433F81E8FE61600678FF8 /* many_to_many.cpp */; };
+		7AC433FF1E8FE61600678FF8 /* map_matching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433F91E8FE61600678FF8 /* map_matching.cpp */; };
+		7AC434001E8FE61600678FF8 /* routing_base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433FA1E8FE61600678FF8 /* routing_base.cpp */; };
+		7AC434011E8FE61600678FF8 /* shortest_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433FB1E8FE61600678FF8 /* shortest_path.cpp */; };
+		7AC4340B1E8FE64C00678FF8 /* assert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC434031E8FE64C00678FF8 /* assert.cpp */; };
+		7AC4340C1E8FE64C00678FF8 /* coordinate_calculation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC434041E8FE64C00678FF8 /* coordinate_calculation.cpp */; };
+		7AC4340D1E8FE64C00678FF8 /* coordinate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC434051E8FE64C00678FF8 /* coordinate.cpp */; };
+		7AC4340E1E8FE64C00678FF8 /* exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC434061E8FE64C00678FF8 /* exception.cpp */; };
+		7AC4340F1E8FE64C00678FF8 /* fingerprint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC434071E8FE64C00678FF8 /* fingerprint.cpp */; };
+		7AC434101E8FE64C00678FF8 /* geojson_debug_policies.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC434081E8FE64C00678FF8 /* geojson_debug_policies.cpp */; };
+		7AC434111E8FE64C00678FF8 /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC434091E8FE64C00678FF8 /* log.cpp */; };
+		7AC434121E8FE64C00678FF8 /* name_table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4340A1E8FE64C00678FF8 /* name_table.cpp */; };
+		7AC434181E8FE66600678FF8 /* bearing_class.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC434141E8FE66600678FF8 /* bearing_class.cpp */; };
+		7AC434191E8FE66600678FF8 /* entry_class.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC434151E8FE66600678FF8 /* entry_class.cpp */; };
+		7AC4341A1E8FE66600678FF8 /* turn_bearing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC434161E8FE66600678FF8 /* turn_bearing.cpp */; };
+		7AC4341B1E8FE66600678FF8 /* turn_lanes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC434171E8FE66600678FF8 /* turn_lanes.cpp */; };
+		7AC4341F1E8FE6A700678FF8 /* storage_config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4341D1E8FE6A700678FF8 /* storage_config.cpp */; };
+		7AC434201E8FE6A700678FF8 /* storage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4341E1E8FE6A700678FF8 /* storage.cpp */; };
+		7AC434241E8FF0E000678FF8 /* boost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC434231E8FF0E000678FF8 /* boost.framework */; };
+		7AC434271E8FF79500678FF8 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC434261E8FF79500678FF8 /* libstdc++.tbd */; };
+		7AC434291E8FF7A400678FF8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC434281E8FF7A400678FF8 /* libc++.tbd */; };
+		7AC4342C1E8FF9A400678FF8 /* mapbox in Resources */ = {isa = PBXBuildFile; fileRef = 7AC4342B1E8FF9A400678FF8 /* mapbox */; };
+		7AC434301E90FCAC00678FF8 /* libtbbmallocUnivesal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC4342E1E90FCAC00678FF8 /* libtbbmallocUnivesal.a */; };
+		7AC434311E90FCAC00678FF8 /* libtbbUnivesal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC4342F1E90FCAC00678FF8 /* libtbbUnivesal.a */; };
+		7AC434371E9122BD00678FF8 /* libstxxlUniversal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC434361E9122BD00678FF8 /* libstxxlUniversal.a */; };
+		7AC434601E91482C00678FF8 /* Routeur.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AC4345E1E91482B00678FF8 /* Routeur.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7AC434611E91482C00678FF8 /* Routeur.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4345F1E91482C00678FF8 /* Routeur.mm */; };
+		7AC434631E914BB300678FF8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC434621E914BB300678FF8 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +74,63 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7AC433AA1E8FDB9E00678FF8 /* OSRM-iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "OSRM-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AC433AA1E8FDB9E00678FF8 /* OSRM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OSRM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC433AD1E8FDB9E00678FF8 /* OSRM-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OSRM-iOS.h"; sourceTree = "<group>"; };
 		7AC433AE1E8FDB9E00678FF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7AC433B31E8FDB9E00678FF8 /* OSRM-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OSRM-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AC433B31E8FDB9E00678FF8 /* OSRM-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OSRM-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC433B81E8FDB9E00678FF8 /* OSRM_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSRM_iOSTests.m; sourceTree = "<group>"; };
 		7AC433BA1E8FDB9E00678FF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AC433C71E8FE3F800678FF8 /* douglas_peucker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = douglas_peucker.cpp; path = "3rdParty/osrm-backend/src/engine/douglas_peucker.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433C81E8FE3F800678FF8 /* engine_config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = engine_config.cpp; path = "3rdParty/osrm-backend/src/engine/engine_config.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433C91E8FE3F800678FF8 /* hint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hint.cpp; path = "3rdParty/osrm-backend/src/engine/hint.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433CA1E8FE3F800678FF8 /* polyline_compressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = polyline_compressor.cpp; path = "3rdParty/osrm-backend/src/engine/polyline_compressor.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433CB1E8FE3F800678FF8 /* search_engine_data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = search_engine_data.cpp; path = "3rdParty/osrm-backend/src/engine/search_engine_data.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433D11E8FE42400678FF8 /* osrm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = osrm.cpp; path = "3rdParty/osrm-backend/src/osrm/osrm.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433D41E8FE48E00678FF8 /* json_factory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = json_factory.cpp; path = "3rdParty/osrm-backend/src/engine/api/json_factory.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433D71E8FE4B500678FF8 /* process_memory_allocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = process_memory_allocator.cpp; path = "3rdParty/osrm-backend/src/engine/datafacade/process_memory_allocator.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433D81E8FE4B500678FF8 /* shared_memory_allocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = shared_memory_allocator.cpp; path = "3rdParty/osrm-backend/src/engine/datafacade/shared_memory_allocator.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433DC1E8FE58B00678FF8 /* assemble_overview.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = assemble_overview.cpp; path = "3rdParty/osrm-backend/src/engine/guidance/assemble_overview.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433DD1E8FE58B00678FF8 /* assemble_route.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = assemble_route.cpp; path = "3rdParty/osrm-backend/src/engine/guidance/assemble_route.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433DE1E8FE58B00678FF8 /* assemble_steps.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = assemble_steps.cpp; path = "3rdParty/osrm-backend/src/engine/guidance/assemble_steps.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433DF1E8FE58B00678FF8 /* lane_processing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lane_processing.cpp; path = "3rdParty/osrm-backend/src/engine/guidance/lane_processing.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433E01E8FE58B00678FF8 /* post_processing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = post_processing.cpp; path = "3rdParty/osrm-backend/src/engine/guidance/post_processing.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433E61E8FE5AC00678FF8 /* engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = engine.cpp; path = "3rdParty/osrm-backend/src/engine/engine.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433E91E8FE5DA00678FF8 /* match.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = match.cpp; path = "3rdParty/osrm-backend/src/engine/plugins/match.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433EA1E8FE5DA00678FF8 /* nearest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = nearest.cpp; path = "3rdParty/osrm-backend/src/engine/plugins/nearest.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433EB1E8FE5DA00678FF8 /* table.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = table.cpp; path = "3rdParty/osrm-backend/src/engine/plugins/table.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433EC1E8FE5DA00678FF8 /* tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tile.cpp; path = "3rdParty/osrm-backend/src/engine/plugins/tile.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433ED1E8FE5DA00678FF8 /* trip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = trip.cpp; path = "3rdParty/osrm-backend/src/engine/plugins/trip.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433EE1E8FE5DA00678FF8 /* viaroute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = viaroute.cpp; path = "3rdParty/osrm-backend/src/engine/plugins/viaroute.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433F61E8FE61600678FF8 /* alternative_path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = alternative_path.cpp; path = "3rdParty/osrm-backend/src/engine/routing_algorithms/alternative_path.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433F71E8FE61600678FF8 /* direct_shortest_path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = direct_shortest_path.cpp; path = "3rdParty/osrm-backend/src/engine/routing_algorithms/direct_shortest_path.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433F81E8FE61600678FF8 /* many_to_many.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = many_to_many.cpp; path = "3rdParty/osrm-backend/src/engine/routing_algorithms/many_to_many.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433F91E8FE61600678FF8 /* map_matching.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = map_matching.cpp; path = "3rdParty/osrm-backend/src/engine/routing_algorithms/map_matching.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433FA1E8FE61600678FF8 /* routing_base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = routing_base.cpp; path = "3rdParty/osrm-backend/src/engine/routing_algorithms/routing_base.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC433FB1E8FE61600678FF8 /* shortest_path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = shortest_path.cpp; path = "3rdParty/osrm-backend/src/engine/routing_algorithms/shortest_path.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC434031E8FE64C00678FF8 /* assert.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = assert.cpp; path = "3rdParty/osrm-backend/src/util/assert.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC434041E8FE64C00678FF8 /* coordinate_calculation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = coordinate_calculation.cpp; path = "3rdParty/osrm-backend/src/util/coordinate_calculation.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC434051E8FE64C00678FF8 /* coordinate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = coordinate.cpp; path = "3rdParty/osrm-backend/src/util/coordinate.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC434061E8FE64C00678FF8 /* exception.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = exception.cpp; path = "3rdParty/osrm-backend/src/util/exception.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC434071E8FE64C00678FF8 /* fingerprint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fingerprint.cpp; path = "3rdParty/osrm-backend/src/util/fingerprint.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC434081E8FE64C00678FF8 /* geojson_debug_policies.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = geojson_debug_policies.cpp; path = "3rdParty/osrm-backend/src/util/geojson_debug_policies.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC434091E8FE64C00678FF8 /* log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = log.cpp; path = "3rdParty/osrm-backend/src/util/log.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC4340A1E8FE64C00678FF8 /* name_table.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = name_table.cpp; path = "3rdParty/osrm-backend/src/util/name_table.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC434141E8FE66600678FF8 /* bearing_class.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bearing_class.cpp; path = "3rdParty/osrm-backend/src/util/guidance/bearing_class.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC434151E8FE66600678FF8 /* entry_class.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = entry_class.cpp; path = "3rdParty/osrm-backend/src/util/guidance/entry_class.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC434161E8FE66600678FF8 /* turn_bearing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = turn_bearing.cpp; path = "3rdParty/osrm-backend/src/util/guidance/turn_bearing.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC434171E8FE66600678FF8 /* turn_lanes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = turn_lanes.cpp; path = "3rdParty/osrm-backend/src/util/guidance/turn_lanes.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC4341D1E8FE6A700678FF8 /* storage_config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = storage_config.cpp; path = "3rdParty/osrm-backend/src/storage/storage_config.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC4341E1E8FE6A700678FF8 /* storage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = storage.cpp; path = "3rdParty/osrm-backend/src/storage/storage.cpp"; sourceTree = SOURCE_ROOT; };
+		7AC434231E8FF0E000678FF8 /* boost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = boost.framework; path = 3rdParty/boost/boost.framework; sourceTree = SOURCE_ROOT; };
+		7AC434261E8FF79500678FF8 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		7AC434281E8FF7A400678FF8 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		7AC4342B1E8FF9A400678FF8 /* mapbox */ = {isa = PBXFileReference; lastKnownFileType = folder; name = mapbox; path = "3rdParty/osrm-backend/third_party/variant/include/mapbox"; sourceTree = SOURCE_ROOT; };
+		7AC4342E1E90FCAC00678FF8 /* libtbbmallocUnivesal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtbbmallocUnivesal.a; path = 3rdParty/tbb_libs/libtbbmallocUnivesal.a; sourceTree = SOURCE_ROOT; };
+		7AC4342F1E90FCAC00678FF8 /* libtbbUnivesal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtbbUnivesal.a; path = 3rdParty/tbb_libs/libtbbUnivesal.a; sourceTree = SOURCE_ROOT; };
+		7AC434361E9122BD00678FF8 /* libstxxlUniversal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libstxxlUniversal.a; path = 3rdParty/stxxl_lib/libstxxlUniversal.a; sourceTree = SOURCE_ROOT; };
+		7AC4345E1E91482B00678FF8 /* Routeur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Routeur.h; sourceTree = "<group>"; };
+		7AC4345F1E91482C00678FF8 /* Routeur.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Routeur.mm; sourceTree = "<group>"; };
+		7AC434621E914BB300678FF8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +138,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AC434631E914BB300678FF8 /* CoreLocation.framework in Frameworks */,
+				7AC434291E8FF7A400678FF8 /* libc++.tbd in Frameworks */,
+				7AC434271E8FF79500678FF8 /* libstdc++.tbd in Frameworks */,
+				7AC434311E90FCAC00678FF8 /* libtbbUnivesal.a in Frameworks */,
+				7AC434241E8FF0E000678FF8 /* boost.framework in Frameworks */,
+				7AC434301E90FCAC00678FF8 /* libtbbmallocUnivesal.a in Frameworks */,
+				7AC434371E9122BD00678FF8 /* libstxxlUniversal.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,7 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AC433B41E8FDB9E00678FF8 /* OSRM-iOS.framework in Frameworks */,
+				7AC433B41E8FDB9E00678FF8 /* OSRM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,14 +165,15 @@
 				7AC433AC1E8FDB9E00678FF8 /* OSRM-iOS */,
 				7AC433B71E8FDB9E00678FF8 /* OSRM-iOSTests */,
 				7AC433AB1E8FDB9E00678FF8 /* Products */,
+				7AC434251E8FF79400678FF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		7AC433AB1E8FDB9E00678FF8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7AC433AA1E8FDB9E00678FF8 /* OSRM-iOS.framework */,
-				7AC433B31E8FDB9E00678FF8 /* OSRM-iOSTests.xctest */,
+				7AC433AA1E8FDB9E00678FF8 /* OSRM.framework */,
+				7AC433B31E8FDB9E00678FF8 /* OSRM-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,8 +181,11 @@
 		7AC433AC1E8FDB9E00678FF8 /* OSRM-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				7AC433C41E8FE0AB00678FF8 /* 3rdParty */,
 				7AC433AD1E8FDB9E00678FF8 /* OSRM-iOS.h */,
 				7AC433AE1E8FDB9E00678FF8 /* Info.plist */,
+				7AC4345E1E91482B00678FF8 /* Routeur.h */,
+				7AC4345F1E91482C00678FF8 /* Routeur.mm */,
 			);
 			path = "OSRM-iOS";
 			sourceTree = "<group>";
@@ -86,6 +199,189 @@
 			path = "OSRM-iOSTests";
 			sourceTree = "<group>";
 		};
+		7AC433C41E8FE0AB00678FF8 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				7AC434381E913EA600678FF8 /* protozero */,
+				7AC434331E911DE600678FF8 /* stxxl */,
+				7AC4342D1E90FC9400678FF8 /* tbb */,
+				7AC434221E8FF0CE00678FF8 /* Boost */,
+				7AC433C51E8FE0B500678FF8 /* OSRM */,
+			);
+			name = 3rdParty;
+			sourceTree = "<group>";
+		};
+		7AC433C51E8FE0B500678FF8 /* OSRM */ = {
+			isa = PBXGroup;
+			children = (
+				7AC433D11E8FE42400678FF8 /* osrm.cpp */,
+				7AC433C61E8FE39000678FF8 /* engine */,
+				7AC434021E8FE61E00678FF8 /* util */,
+				7AC4341C1E8FE68E00678FF8 /* storage */,
+				7AC4342A1E8FF96800678FF8 /* thirdParty */,
+			);
+			name = OSRM;
+			sourceTree = "<group>";
+		};
+		7AC433C61E8FE39000678FF8 /* engine */ = {
+			isa = PBXGroup;
+			children = (
+				7AC433C71E8FE3F800678FF8 /* douglas_peucker.cpp */,
+				7AC433C81E8FE3F800678FF8 /* engine_config.cpp */,
+				7AC433E61E8FE5AC00678FF8 /* engine.cpp */,
+				7AC433C91E8FE3F800678FF8 /* hint.cpp */,
+				7AC433CA1E8FE3F800678FF8 /* polyline_compressor.cpp */,
+				7AC433CB1E8FE3F800678FF8 /* search_engine_data.cpp */,
+				7AC433D31E8FE46D00678FF8 /* api */,
+				7AC433D61E8FE49500678FF8 /* datafacade */,
+				7AC433DB1E8FE4EC00678FF8 /* guidance */,
+				7AC433E81E8FE5C300678FF8 /* plugins */,
+				7AC433F51E8FE5F300678FF8 /* routing_algorithms */,
+			);
+			name = engine;
+			sourceTree = "<group>";
+		};
+		7AC433D31E8FE46D00678FF8 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				7AC433D41E8FE48E00678FF8 /* json_factory.cpp */,
+			);
+			name = api;
+			sourceTree = "<group>";
+		};
+		7AC433D61E8FE49500678FF8 /* datafacade */ = {
+			isa = PBXGroup;
+			children = (
+				7AC433D71E8FE4B500678FF8 /* process_memory_allocator.cpp */,
+				7AC433D81E8FE4B500678FF8 /* shared_memory_allocator.cpp */,
+			);
+			name = datafacade;
+			sourceTree = "<group>";
+		};
+		7AC433DB1E8FE4EC00678FF8 /* guidance */ = {
+			isa = PBXGroup;
+			children = (
+				7AC433DC1E8FE58B00678FF8 /* assemble_overview.cpp */,
+				7AC433DD1E8FE58B00678FF8 /* assemble_route.cpp */,
+				7AC433DE1E8FE58B00678FF8 /* assemble_steps.cpp */,
+				7AC433DF1E8FE58B00678FF8 /* lane_processing.cpp */,
+				7AC433E01E8FE58B00678FF8 /* post_processing.cpp */,
+			);
+			name = guidance;
+			sourceTree = "<group>";
+		};
+		7AC433E81E8FE5C300678FF8 /* plugins */ = {
+			isa = PBXGroup;
+			children = (
+				7AC433E91E8FE5DA00678FF8 /* match.cpp */,
+				7AC433EA1E8FE5DA00678FF8 /* nearest.cpp */,
+				7AC433EB1E8FE5DA00678FF8 /* table.cpp */,
+				7AC433EC1E8FE5DA00678FF8 /* tile.cpp */,
+				7AC433ED1E8FE5DA00678FF8 /* trip.cpp */,
+				7AC433EE1E8FE5DA00678FF8 /* viaroute.cpp */,
+			);
+			name = plugins;
+			sourceTree = "<group>";
+		};
+		7AC433F51E8FE5F300678FF8 /* routing_algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				7AC433F61E8FE61600678FF8 /* alternative_path.cpp */,
+				7AC433F71E8FE61600678FF8 /* direct_shortest_path.cpp */,
+				7AC433F81E8FE61600678FF8 /* many_to_many.cpp */,
+				7AC433F91E8FE61600678FF8 /* map_matching.cpp */,
+				7AC433FA1E8FE61600678FF8 /* routing_base.cpp */,
+				7AC433FB1E8FE61600678FF8 /* shortest_path.cpp */,
+			);
+			name = routing_algorithms;
+			sourceTree = "<group>";
+		};
+		7AC434021E8FE61E00678FF8 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				7AC434031E8FE64C00678FF8 /* assert.cpp */,
+				7AC434041E8FE64C00678FF8 /* coordinate_calculation.cpp */,
+				7AC434051E8FE64C00678FF8 /* coordinate.cpp */,
+				7AC434061E8FE64C00678FF8 /* exception.cpp */,
+				7AC434071E8FE64C00678FF8 /* fingerprint.cpp */,
+				7AC434081E8FE64C00678FF8 /* geojson_debug_policies.cpp */,
+				7AC434091E8FE64C00678FF8 /* log.cpp */,
+				7AC4340A1E8FE64C00678FF8 /* name_table.cpp */,
+				7AC434131E8FE64F00678FF8 /* guidance */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		7AC434131E8FE64F00678FF8 /* guidance */ = {
+			isa = PBXGroup;
+			children = (
+				7AC434141E8FE66600678FF8 /* bearing_class.cpp */,
+				7AC434151E8FE66600678FF8 /* entry_class.cpp */,
+				7AC434161E8FE66600678FF8 /* turn_bearing.cpp */,
+				7AC434171E8FE66600678FF8 /* turn_lanes.cpp */,
+			);
+			name = guidance;
+			sourceTree = "<group>";
+		};
+		7AC4341C1E8FE68E00678FF8 /* storage */ = {
+			isa = PBXGroup;
+			children = (
+				7AC4341D1E8FE6A700678FF8 /* storage_config.cpp */,
+				7AC4341E1E8FE6A700678FF8 /* storage.cpp */,
+			);
+			name = storage;
+			sourceTree = "<group>";
+		};
+		7AC434221E8FF0CE00678FF8 /* Boost */ = {
+			isa = PBXGroup;
+			children = (
+				7AC434231E8FF0E000678FF8 /* boost.framework */,
+			);
+			name = Boost;
+			sourceTree = "<group>";
+		};
+		7AC434251E8FF79400678FF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AC434621E914BB300678FF8 /* CoreLocation.framework */,
+				7AC434281E8FF7A400678FF8 /* libc++.tbd */,
+				7AC434261E8FF79500678FF8 /* libstdc++.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7AC4342A1E8FF96800678FF8 /* thirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				7AC4342B1E8FF9A400678FF8 /* mapbox */,
+			);
+			name = thirdParty;
+			sourceTree = "<group>";
+		};
+		7AC4342D1E90FC9400678FF8 /* tbb */ = {
+			isa = PBXGroup;
+			children = (
+				7AC4342E1E90FCAC00678FF8 /* libtbbmallocUnivesal.a */,
+				7AC4342F1E90FCAC00678FF8 /* libtbbUnivesal.a */,
+			);
+			name = tbb;
+			sourceTree = "<group>";
+		};
+		7AC434331E911DE600678FF8 /* stxxl */ = {
+			isa = PBXGroup;
+			children = (
+				7AC434361E9122BD00678FF8 /* libstxxlUniversal.a */,
+			);
+			name = stxxl;
+			sourceTree = "<group>";
+		};
+		7AC434381E913EA600678FF8 /* protozero */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = protozero;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -94,16 +390,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AC433BB1E8FDB9E00678FF8 /* OSRM-iOS.h in Headers */,
+				7AC434601E91482C00678FF8 /* Routeur.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7AC433A91E8FDB9E00678FF8 /* OSRM-iOS */ = {
+		7AC433A91E8FDB9E00678FF8 /* OSRM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7AC433BE1E8FDB9E00678FF8 /* Build configuration list for PBXNativeTarget "OSRM-iOS" */;
+			buildConfigurationList = 7AC433BE1E8FDB9E00678FF8 /* Build configuration list for PBXNativeTarget "OSRM" */;
 			buildPhases = (
+				7AC434321E91001400678FF8 /* ShellScript */,
 				7AC433A51E8FDB9E00678FF8 /* Sources */,
 				7AC433A61E8FDB9E00678FF8 /* Frameworks */,
 				7AC433A71E8FDB9E00678FF8 /* Headers */,
@@ -113,14 +411,14 @@
 			);
 			dependencies = (
 			);
-			name = "OSRM-iOS";
+			name = OSRM;
 			productName = "OSRM-iOS";
-			productReference = 7AC433AA1E8FDB9E00678FF8 /* OSRM-iOS.framework */;
+			productReference = 7AC433AA1E8FDB9E00678FF8 /* OSRM.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7AC433B21E8FDB9E00678FF8 /* OSRM-iOSTests */ = {
+		7AC433B21E8FDB9E00678FF8 /* OSRM-Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7AC433C11E8FDB9E00678FF8 /* Build configuration list for PBXNativeTarget "OSRM-iOSTests" */;
+			buildConfigurationList = 7AC433C11E8FDB9E00678FF8 /* Build configuration list for PBXNativeTarget "OSRM-Tests" */;
 			buildPhases = (
 				7AC433AF1E8FDB9E00678FF8 /* Sources */,
 				7AC433B01E8FDB9E00678FF8 /* Frameworks */,
@@ -131,9 +429,9 @@
 			dependencies = (
 				7AC433B61E8FDB9E00678FF8 /* PBXTargetDependency */,
 			);
-			name = "OSRM-iOSTests";
+			name = "OSRM-Tests";
 			productName = "OSRM-iOSTests";
-			productReference = 7AC433B31E8FDB9E00678FF8 /* OSRM-iOSTests.xctest */;
+			productReference = 7AC433B31E8FDB9E00678FF8 /* OSRM-Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -169,8 +467,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7AC433A91E8FDB9E00678FF8 /* OSRM-iOS */,
-				7AC433B21E8FDB9E00678FF8 /* OSRM-iOSTests */,
+				7AC433A91E8FDB9E00678FF8 /* OSRM */,
+				7AC433B21E8FDB9E00678FF8 /* OSRM-Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -180,6 +478,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AC4342C1E8FF9A400678FF8 /* mapbox in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,11 +491,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7AC434321E91001400678FF8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#3rdParty/buildAll.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7AC433A51E8FDB9E00678FF8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AC433E11E8FE58B00678FF8 /* assemble_overview.cpp in Sources */,
+				7AC434001E8FE61600678FF8 /* routing_base.cpp in Sources */,
+				7AC433E71E8FE5AC00678FF8 /* engine.cpp in Sources */,
+				7AC433DA1E8FE4B500678FF8 /* shared_memory_allocator.cpp in Sources */,
+				7AC433D51E8FE48E00678FF8 /* json_factory.cpp in Sources */,
+				7AC4341F1E8FE6A700678FF8 /* storage_config.cpp in Sources */,
+				7AC433CF1E8FE3F800678FF8 /* polyline_compressor.cpp in Sources */,
+				7AC433E51E8FE58B00678FF8 /* post_processing.cpp in Sources */,
+				7AC433FD1E8FE61600678FF8 /* direct_shortest_path.cpp in Sources */,
+				7AC4340F1E8FE64C00678FF8 /* fingerprint.cpp in Sources */,
+				7AC4341A1E8FE66600678FF8 /* turn_bearing.cpp in Sources */,
+				7AC433D01E8FE3F800678FF8 /* search_engine_data.cpp in Sources */,
+				7AC434101E8FE64C00678FF8 /* geojson_debug_policies.cpp in Sources */,
+				7AC4340C1E8FE64C00678FF8 /* coordinate_calculation.cpp in Sources */,
+				7AC4340B1E8FE64C00678FF8 /* assert.cpp in Sources */,
+				7AC433F41E8FE5DA00678FF8 /* viaroute.cpp in Sources */,
+				7AC434121E8FE64C00678FF8 /* name_table.cpp in Sources */,
+				7AC434011E8FE61600678FF8 /* shortest_path.cpp in Sources */,
+				7AC433FC1E8FE61600678FF8 /* alternative_path.cpp in Sources */,
+				7AC433EF1E8FE5DA00678FF8 /* match.cpp in Sources */,
+				7AC433F31E8FE5DA00678FF8 /* trip.cpp in Sources */,
+				7AC433FE1E8FE61600678FF8 /* many_to_many.cpp in Sources */,
+				7AC434611E91482C00678FF8 /* Routeur.mm in Sources */,
+				7AC4341B1E8FE66600678FF8 /* turn_lanes.cpp in Sources */,
+				7AC4340E1E8FE64C00678FF8 /* exception.cpp in Sources */,
+				7AC434201E8FE6A700678FF8 /* storage.cpp in Sources */,
+				7AC433F11E8FE5DA00678FF8 /* table.cpp in Sources */,
+				7AC433E31E8FE58B00678FF8 /* assemble_steps.cpp in Sources */,
+				7AC433E41E8FE58B00678FF8 /* lane_processing.cpp in Sources */,
+				7AC433D21E8FE42400678FF8 /* osrm.cpp in Sources */,
+				7AC433D91E8FE4B500678FF8 /* process_memory_allocator.cpp in Sources */,
+				7AC433F21E8FE5DA00678FF8 /* tile.cpp in Sources */,
+				7AC434181E8FE66600678FF8 /* bearing_class.cpp in Sources */,
+				7AC433E21E8FE58B00678FF8 /* assemble_route.cpp in Sources */,
+				7AC434191E8FE66600678FF8 /* entry_class.cpp in Sources */,
+				7AC433F01E8FE5DA00678FF8 /* nearest.cpp in Sources */,
+				7AC433CC1E8FE3F800678FF8 /* douglas_peucker.cpp in Sources */,
+				7AC433CD1E8FE3F800678FF8 /* engine_config.cpp in Sources */,
+				7AC4340D1E8FE64C00678FF8 /* coordinate.cpp in Sources */,
+				7AC433CE1E8FE3F800678FF8 /* hint.cpp in Sources */,
+				7AC434111E8FE64C00678FF8 /* log.cpp in Sources */,
+				7AC433FF1E8FE61600678FF8 /* map_matching.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +570,7 @@
 /* Begin PBXTargetDependency section */
 		7AC433B61E8FDB9E00678FF8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7AC433A91E8FDB9E00678FF8 /* OSRM-iOS */;
+			target = 7AC433A91E8FDB9E00678FF8 /* OSRM */;
 			targetProxy = 7AC433B51E8FDB9E00678FF8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -320,16 +677,38 @@
 		7AC433BF1E8FDB9E00678FF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 67KBA9K324;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/3rdParty/boost",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"OSRM_PROJECT_DIR=__FILE__",
+				);
+				HEADER_SEARCH_PATHS = (
+					"3rdParty/osrm-backend/include/**",
+					"3rdParty/osrm-backend/third_party/variant/include/**",
+					"3rdParty/osrm-version/**",
+					3rdParty/tbb/include,
+					3rdParty/stxxl_lib/include,
+					3rdParty/protozero/include,
+				);
 				INFOPLIST_FILE = "OSRM-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xdappfactory.OSRM-iOS";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/3rdParty/tbb_libs",
+					"$(PROJECT_DIR)/3rdParty/stxxl_lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xdappfactory.OSRM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -338,16 +717,35 @@
 		7AC433C01E8FDB9E00678FF8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 67KBA9K324;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/3rdParty/boost",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = "OSRM_PROJECT_DIR=__FILE__";
+				HEADER_SEARCH_PATHS = (
+					"3rdParty/osrm-backend/include/**",
+					"3rdParty/osrm-backend/third_party/variant/include/**",
+					"3rdParty/osrm-version/**",
+					3rdParty/tbb/include,
+					3rdParty/stxxl_lib/include,
+					3rdParty/protozero/include,
+				);
 				INFOPLIST_FILE = "OSRM-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xdappfactory.OSRM-iOS";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/3rdParty/tbb_libs",
+					"$(PROJECT_DIR)/3rdParty/stxxl_lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xdappfactory.OSRM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -387,21 +785,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7AC433BE1E8FDB9E00678FF8 /* Build configuration list for PBXNativeTarget "OSRM-iOS" */ = {
+		7AC433BE1E8FDB9E00678FF8 /* Build configuration list for PBXNativeTarget "OSRM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7AC433BF1E8FDB9E00678FF8 /* Debug */,
 				7AC433C01E8FDB9E00678FF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		7AC433C11E8FDB9E00678FF8 /* Build configuration list for PBXNativeTarget "OSRM-iOSTests" */ = {
+		7AC433C11E8FDB9E00678FF8 /* Build configuration list for PBXNativeTarget "OSRM-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7AC433C21E8FDB9E00678FF8 /* Debug */,
 				7AC433C31E8FDB9E00678FF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
