@@ -1,3 +1,10 @@
 [submodule "3rdParty/osrm-backend"]
 	path = 3rdParty/osrm-backend
 	url = https://github.com/Project-OSRM/osrm-backend
+[submodule "3rdParty/Apple-Boost-BuildScript"]
+	path = 3rdParty/Apple-Boost-BuildScript
+	url = https://github.com/faithfracture/Apple-Boost-BuildScript
+[submodule "3rdParty/tbb"]
+	path = 3rdParty/tbb
+	url = https://github.com/01org/tbb
+

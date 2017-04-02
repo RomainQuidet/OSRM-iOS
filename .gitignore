@@ -61,3 +61,8 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+# Boost generated framework
+3rdParty/boost/
+3rdParty/tbb_libs/
+3rdParty/stxxl_lib/
