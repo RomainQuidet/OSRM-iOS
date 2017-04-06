@@ -11,7 +11,7 @@
 		7A3C9A891E958E5300B4D633 /* RouterRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A3C9A871E958E5200B4D633 /* RouterRenderer.mm */; };
 		7AC433B41E8FDB9E00678FF8 /* OSRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC433AA1E8FDB9E00678FF8 /* OSRM.framework */; };
 		7AC433B91E8FDB9E00678FF8 /* OSRM_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433B81E8FDB9E00678FF8 /* OSRM_iOSTests.m */; };
-		7AC433BB1E8FDB9E00678FF8 /* OSRM-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AC433AD1E8FDB9E00678FF8 /* OSRM-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7AC433BB1E8FDB9E00678FF8 /* OSRM.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AC433AD1E8FDB9E00678FF8 /* OSRM.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7AC433CC1E8FE3F800678FF8 /* douglas_peucker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433C71E8FE3F800678FF8 /* douglas_peucker.cpp */; };
 		7AC433CD1E8FE3F800678FF8 /* engine_config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433C81E8FE3F800678FF8 /* engine_config.cpp */; };
 		7AC433CE1E8FE3F800678FF8 /* hint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433C91E8FE3F800678FF8 /* hint.cpp */; };
@@ -56,7 +56,6 @@
 		7AC434241E8FF0E000678FF8 /* boost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC434231E8FF0E000678FF8 /* boost.framework */; };
 		7AC434271E8FF79500678FF8 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC434261E8FF79500678FF8 /* libstdc++.tbd */; };
 		7AC434291E8FF7A400678FF8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC434281E8FF7A400678FF8 /* libc++.tbd */; };
-		7AC4342C1E8FF9A400678FF8 /* mapbox in Resources */ = {isa = PBXBuildFile; fileRef = 7AC4342B1E8FF9A400678FF8 /* mapbox */; };
 		7AC434301E90FCAC00678FF8 /* libtbbmallocUnivesal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC4342E1E90FCAC00678FF8 /* libtbbmallocUnivesal.a */; };
 		7AC434311E90FCAC00678FF8 /* libtbbUnivesal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC4342F1E90FCAC00678FF8 /* libtbbUnivesal.a */; };
 		7AC434371E9122BD00678FF8 /* libstxxlUniversal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC434361E9122BD00678FF8 /* libstxxlUniversal.a */; };
@@ -79,7 +78,7 @@
 		7A3C9A861E958E5200B4D633 /* RouterRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouterRenderer.h; sourceTree = "<group>"; };
 		7A3C9A871E958E5200B4D633 /* RouterRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RouterRenderer.mm; sourceTree = "<group>"; };
 		7AC433AA1E8FDB9E00678FF8 /* OSRM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OSRM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7AC433AD1E8FDB9E00678FF8 /* OSRM-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OSRM-iOS.h"; sourceTree = "<group>"; };
+		7AC433AD1E8FDB9E00678FF8 /* OSRM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSRM.h; sourceTree = "<group>"; };
 		7AC433AE1E8FDB9E00678FF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AC433B31E8FDB9E00678FF8 /* OSRM-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OSRM-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC433B81E8FDB9E00678FF8 /* OSRM_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSRM_iOSTests.m; sourceTree = "<group>"; };
@@ -186,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				7AC433C41E8FE0AB00678FF8 /* 3rdParty */,
-				7AC433AD1E8FDB9E00678FF8 /* OSRM-iOS.h */,
+				7AC433AD1E8FDB9E00678FF8 /* OSRM.h */,
 				7AC433AE1E8FDB9E00678FF8 /* Info.plist */,
 				7AC4345E1E91482B00678FF8 /* Routeur.h */,
 				7AC4345F1E91482C00678FF8 /* Routeur.mm */,
@@ -395,7 +394,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AC433BB1E8FDB9E00678FF8 /* OSRM-iOS.h in Headers */,
+				7AC433BB1E8FDB9E00678FF8 /* OSRM.h in Headers */,
 				7A3C9A881E958E5300B4D633 /* RouterRenderer.h in Headers */,
 				7AC434601E91482C00678FF8 /* Routeur.h in Headers */,
 			);
@@ -485,7 +484,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AC4342C1E8FF9A400678FF8 /* mapbox in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

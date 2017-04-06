@@ -9,6 +9,17 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CLLocation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
+// Result dic keys
+static NSString * const OSRMResultCodeKey = @"code";
+static NSString * const OSRMResultWaypointsKey = @"waypoints";
+static NSString * const OSRMResultRoutesKey = @"routes";
+static NSString * const OSRMResultMessageKey = @"message";
+
+// Code values
+static NSString * const OSRMCodeOk = @"Ok";
+
 // Route dic keys
 static NSString * const OSRMRouteDistanceKey = @"distance";
 static NSString * const OSRMRouteDurationKey = @"duration";
@@ -48,7 +59,9 @@ static NSString * const OSRMWaypointLocationKey = @"location";
 @interface Routeur : NSObject
 
 - (instancetype)initWithMapData:(NSString *)path;
-- (NSArray *)getRoutesFrom:(CLLocationCoordinate2D)departure to:(CLLocationCoordinate2D)arrival;
+- (NSDictionary *)getRoutesFrom:(CLLocationCoordinate2D)departure to:(CLLocationCoordinate2D)arrival;
 
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -73,16 +73,17 @@
 
 #pragma mark - Public
 
-- (NSArray *)getRoutesFrom:(CLLocationCoordinate2D)departure to:(CLLocationCoordinate2D)arrival
+- (NSDictionary *)getRoutesFrom:(CLLocationCoordinate2D)departure to:(CLLocationCoordinate2D)arrival
 {
     using namespace osrm;
 
-    NSMutableArray *jsonRoutes = [NSMutableArray array];
     // The following shows how to use the Route service; configure this service
     RouteParameters params;
 
     params.coordinates.push_back({util::FloatLongitude{departure.longitude}, util::FloatLatitude{departure.latitude}});
     params.coordinates.push_back({util::FloatLongitude{arrival.longitude}, util::FloatLatitude{arrival.latitude}});
+
+    params.alternatives = true;
 
     // Response is in JSON format
     json::Object result;
@@ -97,33 +98,6 @@
         auto &routes = result.values["routes"].get<json::Array>();
         NSLog(@"good ! Got %@ routes", @(routes.values.size()));
 
-        auto &waypoints = result.values["waypoints"].get<json::Array>();
-        NSLog(@"got %@ waypoints", @(waypoints.values.size()));
-        for (NSInteger i=0; i < waypoints.values.size(); i++)
-        {
-            auto &waypoint = waypoints.values.at(i).get<json::Object>();
-            auto &name = waypoint.values["name"].get<json::String>();
-            NSLog(@"road snap to %@", [NSString stringWithUTF8String:name.value.c_str()]);
-        }
-        
-        // Let's just use the first route
-        auto &route = routes.values.at(0).get<json::Object>();
-        const auto distance = route.values["distance"].get<json::Number>().value;
-        const auto duration = route.values["duration"].get<json::Number>().value;
-
-        NSMutableDictionary *jsonRoute = [NSMutableDictionary dictionaryWithCapacity:route.values.size()];
-        [jsonRoutes addObject:jsonRoute];
-        objCRender(jsonRoute, route);
-
-        // Warn users if extract does not contain the default coordinates from above
-        if (distance == 0 || duration == 0)
-        {
-            std::cout << "Note: distance or duration is zero. ";
-            std::cout << "You are probably doing a query outside of the OSM extract.\n\n";
-        }
-
-        std::cout << "Distance: " << distance << " meter\n";
-        std::cout << "Duration: " << duration << " seconds\n";
     }
     else if (status == Status::Error)
     {
@@ -134,7 +108,11 @@
         std::cout << "Message: " << code << "\n";
     }
 
-    return jsonRoutes;
+    NSMutableDictionary *jsonResult;
+    jsonResult = [NSMutableDictionary dictionaryWithCapacity:result.values.size()];
+    objCRender(jsonResult, result);
+
+    return jsonResult;
 }
 
 @end
