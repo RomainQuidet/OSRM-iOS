@@ -11,9 +11,6 @@
 [submodule "3rdParty/stxxl"]
 	path = 3rdParty/stxxl
 	url = https://github.com/stxxl/stxxl.git
-[submodule "3rdParty/mason"]
-	path = 3rdParty/mason
-	url = https://github.com/mapbox/mason.git
 [submodule "3rdParty/protozero"]
 	path = 3rdParty/protozero
 	url = https://github.com/mapbox/protozero

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A3C9A881E958E5300B4D633 /* RouterRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A3C9A861E958E5200B4D633 /* RouterRenderer.h */; };
+		7A3C9A891E958E5300B4D633 /* RouterRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A3C9A871E958E5200B4D633 /* RouterRenderer.mm */; };
 		7AC433B41E8FDB9E00678FF8 /* OSRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC433AA1E8FDB9E00678FF8 /* OSRM.framework */; };
 		7AC433B91E8FDB9E00678FF8 /* OSRM_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433B81E8FDB9E00678FF8 /* OSRM_iOSTests.m */; };
 		7AC433BB1E8FDB9E00678FF8 /* OSRM-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AC433AD1E8FDB9E00678FF8 /* OSRM-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -74,6 +76,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A3C9A861E958E5200B4D633 /* RouterRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouterRenderer.h; sourceTree = "<group>"; };
+		7A3C9A871E958E5200B4D633 /* RouterRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RouterRenderer.mm; sourceTree = "<group>"; };
 		7AC433AA1E8FDB9E00678FF8 /* OSRM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OSRM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC433AD1E8FDB9E00678FF8 /* OSRM-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OSRM-iOS.h"; sourceTree = "<group>"; };
 		7AC433AE1E8FDB9E00678FF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 				7AC433AE1E8FDB9E00678FF8 /* Info.plist */,
 				7AC4345E1E91482B00678FF8 /* Routeur.h */,
 				7AC4345F1E91482C00678FF8 /* Routeur.mm */,
+				7A3C9A861E958E5200B4D633 /* RouterRenderer.h */,
+				7A3C9A871E958E5200B4D633 /* RouterRenderer.mm */,
 			);
 			path = "OSRM-iOS";
 			sourceTree = "<group>";
@@ -390,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AC433BB1E8FDB9E00678FF8 /* OSRM-iOS.h in Headers */,
+				7A3C9A881E958E5300B4D633 /* RouterRenderer.h in Headers */,
 				7AC434601E91482C00678FF8 /* Routeur.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,6 +548,7 @@
 				7AC433F11E8FE5DA00678FF8 /* table.cpp in Sources */,
 				7AC433E31E8FE58B00678FF8 /* assemble_steps.cpp in Sources */,
 				7AC433E41E8FE58B00678FF8 /* lane_processing.cpp in Sources */,
+				7A3C9A891E958E5300B4D633 /* RouterRenderer.mm in Sources */,
 				7AC433D21E8FE42400678FF8 /* osrm.cpp in Sources */,
 				7AC433D91E8FE4B500678FF8 /* process_memory_allocator.cpp in Sources */,
 				7AC433F21E8FE5DA00678FF8 /* tile.cpp in Sources */,

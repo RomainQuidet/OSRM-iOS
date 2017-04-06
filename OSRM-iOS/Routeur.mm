@@ -7,6 +7,7 @@
 //
 
 #import "Routeur.h"
+#import "RouterRenderer.h"
 
 #include <osrm/match_parameters.hpp>
 #include <osrm/nearest_parameters.hpp>
@@ -59,7 +60,6 @@
         }
 
         NSLog(@"All good, OSRM is initialized");
-
     }
     return self;
 }
@@ -77,32 +77,43 @@
 {
     using namespace osrm;
 
-    NSArray *jsonRoutes;
+    NSMutableArray *jsonRoutes = [NSMutableArray array];
     // The following shows how to use the Route service; configure this service
     RouteParameters params;
 
-    // Route in monaco
-    //    params.coordinates.push_back({util::FloatLongitude{7.419758}, util::FloatLatitude{43.731142}});
-    //    params.coordinates.push_back({util::FloatLongitude{7.419505}, util::FloatLatitude{43.736825}});
-
     params.coordinates.push_back({util::FloatLongitude{departure.longitude}, util::FloatLatitude{departure.latitude}});
-    params.coordinates.push_back({util::FloatLongitude{departure.longitude}, util::FloatLatitude{departure.latitude}});
+    params.coordinates.push_back({util::FloatLongitude{arrival.longitude}, util::FloatLatitude{arrival.latitude}});
 
     // Response is in JSON format
     json::Object result;
 
     // Execute routing request, this does the heavy lifting
+    NSDate *startTime = [NSDate date];
     const auto status = self.myOsrm->Route(params, result);
+    NSLog(@"route computation time: %f", -[startTime timeIntervalSinceNow]);
 
     if (status == Status::Ok)
     {
         auto &routes = result.values["routes"].get<json::Array>();
         NSLog(@"good ! Got %@ routes", @(routes.values.size()));
 
+        auto &waypoints = result.values["waypoints"].get<json::Array>();
+        NSLog(@"got %@ waypoints", @(waypoints.values.size()));
+        for (NSInteger i=0; i < waypoints.values.size(); i++)
+        {
+            auto &waypoint = waypoints.values.at(i).get<json::Object>();
+            auto &name = waypoint.values["name"].get<json::String>();
+            NSLog(@"road snap to %@", [NSString stringWithUTF8String:name.value.c_str()]);
+        }
+        
         // Let's just use the first route
         auto &route = routes.values.at(0).get<json::Object>();
         const auto distance = route.values["distance"].get<json::Number>().value;
         const auto duration = route.values["duration"].get<json::Number>().value;
+
+        NSMutableDictionary *jsonRoute = [NSMutableDictionary dictionaryWithCapacity:route.values.size()];
+        [jsonRoutes addObject:jsonRoute];
+        objCRender(jsonRoute, route);
 
         // Warn users if extract does not contain the default coordinates from above
         if (distance == 0 || duration == 0)
@@ -113,7 +124,6 @@
 
         std::cout << "Distance: " << distance << " meter\n";
         std::cout << "Duration: " << duration << " seconds\n";
-        return EXIT_SUCCESS;
     }
     else if (status == Status::Error)
     {
