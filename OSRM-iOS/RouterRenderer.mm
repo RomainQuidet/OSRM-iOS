@@ -39,7 +39,7 @@ namespace osrm
 
                 void operator()(const String &string) const
                 {
-                    const auto string_to_insert = escape_JSON(string.value);
+                    const auto string_to_insert = string.value;
                     NSString *objcString = [NSString stringWithUTF8String:string_to_insert.c_str()];
                     if ([container isKindOfClass:[NSMutableDictionary class]])
                     {
@@ -142,7 +142,6 @@ namespace osrm
                 for (auto it : object.values)
                 {
                     NSString *first = [NSString stringWithUTF8String:(it.first).c_str()];
-                    NSLog(@"Analysing main object for key %@", first);
                     mapbox::util::apply_visitor(ObjCRenderer(dic, first), it.second);
                 }
             }
