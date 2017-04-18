@@ -19,7 +19,7 @@
 
 #include <cstdlib>
 
-@interface OSRMService (Private)
+@interface OSRMService ()
 
 @property (nonatomic, assign) osrm::OSRM *myOsrm;
 

@@ -52,3 +52,4 @@ static NSString * const OSRMRouteStepRotaryPronunciationKey = @"rotary_pronuncia
 static NSString * const OSRMWaypointNameKey = @"name";
 static NSString * const OSRMWaypointHintKey = @"hint";
 static NSString * const OSRMWaypointLocationKey = @"location";
+static NSString * const OSRMWaypointDistanceKey = @"distance";

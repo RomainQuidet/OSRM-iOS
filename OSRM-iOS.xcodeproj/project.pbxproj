@@ -63,10 +63,11 @@
 		7AC434611E91482C00678FF8 /* RouteService.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4345F1E91482C00678FF8 /* RouteService.mm */; };
 		7AC434631E914BB300678FF8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC434621E914BB300678FF8 /* CoreLocation.framework */; };
 		7ADC06FD1EA6572600FD131B /* ResponseKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ADC06FC1EA641FE00FD131B /* ResponseKeys.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7ADC07041EA6693100FD131B /* NearestService.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ADC07021EA6693000FD131B /* NearestService.h */; };
+		7ADC07041EA6693100FD131B /* NearestService.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ADC07021EA6693000FD131B /* NearestService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7ADC07051EA6693100FD131B /* NearestService.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7ADC07031EA6693000FD131B /* NearestService.mm */; };
-		7ADC07081EA66A9400FD131B /* OSRMService.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ADC07061EA66A9400FD131B /* OSRMService.h */; };
+		7ADC07081EA66A9400FD131B /* OSRMService.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ADC07061EA66A9400FD131B /* OSRMService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7ADC07091EA66A9400FD131B /* OSRMService.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7ADC07071EA66A9400FD131B /* OSRMService.mm */; };
+		7ADC070B1EA6A13C00FD131B /* OSRMService_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ADC070A1EA66D1E00FD131B /* OSRMService_Private.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -412,11 +413,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AC433BB1E8FDB9E00678FF8 /* OSRM.h in Headers */,
-				7ADC07041EA6693100FD131B /* NearestService.h in Headers */,
 				7A3C9A881E958E5300B4D633 /* RouteRenderer.h in Headers */,
-				7ADC06FD1EA6572600FD131B /* ResponseKeys.h in Headers */,
-				7AC434601E91482C00678FF8 /* RouteService.h in Headers */,
 				7ADC07081EA66A9400FD131B /* OSRMService.h in Headers */,
+				7ADC07041EA6693100FD131B /* NearestService.h in Headers */,
+				7ADC06FD1EA6572600FD131B /* ResponseKeys.h in Headers */,
+				7ADC070B1EA6A13C00FD131B /* OSRMService_Private.h in Headers */,
+				7AC434601E91482C00678FF8 /* RouteService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

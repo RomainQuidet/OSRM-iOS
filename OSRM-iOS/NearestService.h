@@ -10,6 +10,7 @@
 #import <CoreLocation/CLLocation.h>
 #import <OSRM/OSRMService.h>
 
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  Nearest Service: Snaps a coordinate to the street network and returns the nearest n matches.
@@ -31,3 +32,5 @@
 - (NSDictionary<NSString *, NSObject *> *)getWaypointsFrom:(CLLocationCoordinate2D)location;
 
 @end
+
+NS_ASSUME_NONNULL_END

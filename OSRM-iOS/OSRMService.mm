@@ -32,7 +32,7 @@
 
         // Routing machine with several services (such as Route, Table, Nearest, Trip, Match)
         try {
-            self.myOsrm = new OSRM(config);
+            _myOsrm = new OSRM(config);
         } catch (...) {
             NSLog(@"exception: OSRM not created ...");
         }

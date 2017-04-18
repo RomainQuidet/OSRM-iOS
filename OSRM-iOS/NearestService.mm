@@ -25,8 +25,6 @@
 
 @implementation NearestService
 
-#pragma mark - Init
-
 #pragma mark - Public
 
 - (NSDictionary<NSString *, NSObject *> *)getWaypointsFrom:(CLLocationCoordinate2D)location
@@ -37,6 +35,7 @@
     NearestParameters params;
 
     params.coordinates.push_back({util::FloatLongitude{location.longitude}, util::FloatLatitude{location.latitude}});
+    params.number_of_results = (unsigned int) self.number;
 
     // Response is in JSON format
     json::Object result;

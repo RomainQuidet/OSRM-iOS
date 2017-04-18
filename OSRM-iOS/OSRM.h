@@ -16,5 +16,6 @@ FOUNDATION_EXPORT const unsigned char OSRMVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <OSRM/PublicHeader.h>
 #import <OSRM/ResponseKeys.h>
+#import <OSRM/OSRMService.h>
 #import <OSRM/RouteService.h>
-
+#import <OSRM/NearestService.h>
