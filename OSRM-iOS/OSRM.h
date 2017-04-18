@@ -6,7 +6,7 @@
 //  Copyright © 2017 XDAppfactory. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for OSRM.
 FOUNDATION_EXPORT double OSRMVersionNumber;
@@ -15,5 +15,6 @@ FOUNDATION_EXPORT double OSRMVersionNumber;
 FOUNDATION_EXPORT const unsigned char OSRMVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <OSRM/PublicHeader.h>
-#import <OSRM/Routeur.h>
+#import <OSRM/ResponseKeys.h>
+#import <OSRM/RouteService.h>
 

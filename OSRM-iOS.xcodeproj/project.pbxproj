@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A3C9A881E958E5300B4D633 /* RouterRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A3C9A861E958E5200B4D633 /* RouterRenderer.h */; };
-		7A3C9A891E958E5300B4D633 /* RouterRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A3C9A871E958E5200B4D633 /* RouterRenderer.mm */; };
+		7A3C9A881E958E5300B4D633 /* RouteRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A3C9A861E958E5200B4D633 /* RouteRenderer.h */; };
+		7A3C9A891E958E5300B4D633 /* RouteRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A3C9A871E958E5200B4D633 /* RouteRenderer.mm */; };
 		7AC433B41E8FDB9E00678FF8 /* OSRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC433AA1E8FDB9E00678FF8 /* OSRM.framework */; };
 		7AC433B91E8FDB9E00678FF8 /* OSRM_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC433B81E8FDB9E00678FF8 /* OSRM_iOSTests.m */; };
 		7AC433BB1E8FDB9E00678FF8 /* OSRM.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AC433AD1E8FDB9E00678FF8 /* OSRM.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -59,9 +59,14 @@
 		7AC434301E90FCAC00678FF8 /* libtbbmallocUnivesal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC4342E1E90FCAC00678FF8 /* libtbbmallocUnivesal.a */; };
 		7AC434311E90FCAC00678FF8 /* libtbbUnivesal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC4342F1E90FCAC00678FF8 /* libtbbUnivesal.a */; };
 		7AC434371E9122BD00678FF8 /* libstxxlUniversal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC434361E9122BD00678FF8 /* libstxxlUniversal.a */; };
-		7AC434601E91482C00678FF8 /* Routeur.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AC4345E1E91482B00678FF8 /* Routeur.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7AC434611E91482C00678FF8 /* Routeur.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4345F1E91482C00678FF8 /* Routeur.mm */; };
+		7AC434601E91482C00678FF8 /* RouteService.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AC4345E1E91482B00678FF8 /* RouteService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7AC434611E91482C00678FF8 /* RouteService.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4345F1E91482C00678FF8 /* RouteService.mm */; };
 		7AC434631E914BB300678FF8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC434621E914BB300678FF8 /* CoreLocation.framework */; };
+		7ADC06FD1EA6572600FD131B /* ResponseKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ADC06FC1EA641FE00FD131B /* ResponseKeys.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7ADC07041EA6693100FD131B /* NearestService.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ADC07021EA6693000FD131B /* NearestService.h */; };
+		7ADC07051EA6693100FD131B /* NearestService.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7ADC07031EA6693000FD131B /* NearestService.mm */; };
+		7ADC07081EA66A9400FD131B /* OSRMService.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ADC07061EA66A9400FD131B /* OSRMService.h */; };
+		7ADC07091EA66A9400FD131B /* OSRMService.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7ADC07071EA66A9400FD131B /* OSRMService.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,8 +80,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7A3C9A861E958E5200B4D633 /* RouterRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouterRenderer.h; sourceTree = "<group>"; };
-		7A3C9A871E958E5200B4D633 /* RouterRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RouterRenderer.mm; sourceTree = "<group>"; };
+		7A3C9A861E958E5200B4D633 /* RouteRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteRenderer.h; sourceTree = "<group>"; };
+		7A3C9A871E958E5200B4D633 /* RouteRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RouteRenderer.mm; sourceTree = "<group>"; };
 		7AC433AA1E8FDB9E00678FF8 /* OSRM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OSRM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC433AD1E8FDB9E00678FF8 /* OSRM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSRM.h; sourceTree = "<group>"; };
 		7AC433AE1E8FDB9E00678FF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -131,9 +136,15 @@
 		7AC4342E1E90FCAC00678FF8 /* libtbbmallocUnivesal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtbbmallocUnivesal.a; path = 3rdParty/tbb_libs/libtbbmallocUnivesal.a; sourceTree = SOURCE_ROOT; };
 		7AC4342F1E90FCAC00678FF8 /* libtbbUnivesal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtbbUnivesal.a; path = 3rdParty/tbb_libs/libtbbUnivesal.a; sourceTree = SOURCE_ROOT; };
 		7AC434361E9122BD00678FF8 /* libstxxlUniversal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libstxxlUniversal.a; path = 3rdParty/stxxl_lib/libstxxlUniversal.a; sourceTree = SOURCE_ROOT; };
-		7AC4345E1E91482B00678FF8 /* Routeur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Routeur.h; sourceTree = "<group>"; };
-		7AC4345F1E91482C00678FF8 /* Routeur.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Routeur.mm; sourceTree = "<group>"; };
+		7AC4345E1E91482B00678FF8 /* RouteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteService.h; sourceTree = "<group>"; };
+		7AC4345F1E91482C00678FF8 /* RouteService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RouteService.mm; sourceTree = "<group>"; };
 		7AC434621E914BB300678FF8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7ADC06FC1EA641FE00FD131B /* ResponseKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponseKeys.h; sourceTree = "<group>"; };
+		7ADC07021EA6693000FD131B /* NearestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearestService.h; sourceTree = "<group>"; };
+		7ADC07031EA6693000FD131B /* NearestService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NearestService.mm; sourceTree = "<group>"; };
+		7ADC07061EA66A9400FD131B /* OSRMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSRMService.h; sourceTree = "<group>"; };
+		7ADC07071EA66A9400FD131B /* OSRMService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OSRMService.mm; sourceTree = "<group>"; };
+		7ADC070A1EA66D1E00FD131B /* OSRMService_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSRMService_Private.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,10 +198,16 @@
 				7AC433C41E8FE0AB00678FF8 /* 3rdParty */,
 				7AC433AD1E8FDB9E00678FF8 /* OSRM.h */,
 				7AC433AE1E8FDB9E00678FF8 /* Info.plist */,
-				7AC4345E1E91482B00678FF8 /* Routeur.h */,
-				7AC4345F1E91482C00678FF8 /* Routeur.mm */,
-				7A3C9A861E958E5200B4D633 /* RouterRenderer.h */,
-				7A3C9A871E958E5200B4D633 /* RouterRenderer.mm */,
+				7ADC07061EA66A9400FD131B /* OSRMService.h */,
+				7ADC070A1EA66D1E00FD131B /* OSRMService_Private.h */,
+				7ADC07071EA66A9400FD131B /* OSRMService.mm */,
+				7AC4345E1E91482B00678FF8 /* RouteService.h */,
+				7AC4345F1E91482C00678FF8 /* RouteService.mm */,
+				7A3C9A861E958E5200B4D633 /* RouteRenderer.h */,
+				7A3C9A871E958E5200B4D633 /* RouteRenderer.mm */,
+				7ADC06FC1EA641FE00FD131B /* ResponseKeys.h */,
+				7ADC07021EA6693000FD131B /* NearestService.h */,
+				7ADC07031EA6693000FD131B /* NearestService.mm */,
 			);
 			path = "OSRM-iOS";
 			sourceTree = "<group>";
@@ -395,8 +412,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AC433BB1E8FDB9E00678FF8 /* OSRM.h in Headers */,
-				7A3C9A881E958E5300B4D633 /* RouterRenderer.h in Headers */,
-				7AC434601E91482C00678FF8 /* Routeur.h in Headers */,
+				7ADC07041EA6693100FD131B /* NearestService.h in Headers */,
+				7A3C9A881E958E5300B4D633 /* RouteRenderer.h in Headers */,
+				7ADC06FD1EA6572600FD131B /* ResponseKeys.h in Headers */,
+				7AC434601E91482C00678FF8 /* RouteService.h in Headers */,
+				7ADC07081EA66A9400FD131B /* OSRMService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +545,7 @@
 				7AC4341F1E8FE6A700678FF8 /* storage_config.cpp in Sources */,
 				7AC433CF1E8FE3F800678FF8 /* polyline_compressor.cpp in Sources */,
 				7AC433E51E8FE58B00678FF8 /* post_processing.cpp in Sources */,
+				7ADC07091EA66A9400FD131B /* OSRMService.mm in Sources */,
 				7AC433FD1E8FE61600678FF8 /* direct_shortest_path.cpp in Sources */,
 				7AC4340F1E8FE64C00678FF8 /* fingerprint.cpp in Sources */,
 				7AC4341A1E8FE66600678FF8 /* turn_bearing.cpp in Sources */,
@@ -535,18 +556,19 @@
 				7AC433F41E8FE5DA00678FF8 /* viaroute.cpp in Sources */,
 				7AC434121E8FE64C00678FF8 /* name_table.cpp in Sources */,
 				7AC434011E8FE61600678FF8 /* shortest_path.cpp in Sources */,
+				7ADC07051EA6693100FD131B /* NearestService.mm in Sources */,
 				7AC433FC1E8FE61600678FF8 /* alternative_path.cpp in Sources */,
 				7AC433EF1E8FE5DA00678FF8 /* match.cpp in Sources */,
 				7AC433F31E8FE5DA00678FF8 /* trip.cpp in Sources */,
 				7AC433FE1E8FE61600678FF8 /* many_to_many.cpp in Sources */,
-				7AC434611E91482C00678FF8 /* Routeur.mm in Sources */,
+				7AC434611E91482C00678FF8 /* RouteService.mm in Sources */,
 				7AC4341B1E8FE66600678FF8 /* turn_lanes.cpp in Sources */,
 				7AC4340E1E8FE64C00678FF8 /* exception.cpp in Sources */,
 				7AC434201E8FE6A700678FF8 /* storage.cpp in Sources */,
 				7AC433F11E8FE5DA00678FF8 /* table.cpp in Sources */,
 				7AC433E31E8FE58B00678FF8 /* assemble_steps.cpp in Sources */,
 				7AC433E41E8FE58B00678FF8 /* lane_processing.cpp in Sources */,
-				7A3C9A891E958E5300B4D633 /* RouterRenderer.mm in Sources */,
+				7A3C9A891E958E5300B4D633 /* RouteRenderer.mm in Sources */,
 				7AC433D21E8FE42400678FF8 /* osrm.cpp in Sources */,
 				7AC433D91E8FE4B500678FF8 /* process_memory_allocator.cpp in Sources */,
 				7AC433F21E8FE5DA00678FF8 /* tile.cpp in Sources */,

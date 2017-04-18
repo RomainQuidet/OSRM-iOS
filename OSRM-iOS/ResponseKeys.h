@@ -1,15 +1,12 @@
 //
-//  Routeur.h
+//  ResponseKeys.h
 //  OSRM-iOS
 //
-//  Created by Romain Quidet on 02/04/2017.
+//  Created by Romain Quidet on 18/04/2017.
 //  Copyright © 2017 XDAppfactory. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreLocation/CLLocation.h>
-
-NS_ASSUME_NONNULL_BEGIN
 
 // Result dic keys
 static NSString * const OSRMResultCodeKey = @"code";
@@ -55,13 +52,3 @@ static NSString * const OSRMRouteStepRotaryPronunciationKey = @"rotary_pronuncia
 static NSString * const OSRMWaypointNameKey = @"name";
 static NSString * const OSRMWaypointHintKey = @"hint";
 static NSString * const OSRMWaypointLocationKey = @"location";
-
-@interface Routeur : NSObject
-
-- (instancetype)initWithMapData:(NSString *)path;
-- (NSDictionary *)getRoutesFrom:(CLLocationCoordinate2D)departure to:(CLLocationCoordinate2D)arrival;
-
-
-@end
-
-NS_ASSUME_NONNULL_END

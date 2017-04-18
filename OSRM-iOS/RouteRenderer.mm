@@ -6,7 +6,7 @@
 //  Copyright © 2017 XDAppfactory. All rights reserved.
 //
 
-#import "RouterRenderer.h"
+#import "RouteRenderer.h"
 
 // based on
 // https://svn.apache.org/repos/asf/mesos/tags/release-0.9.0-incubating-RC0/src/common/json.hpp
@@ -149,7 +149,7 @@ namespace osrm
     } // namespace util
 } // namespace osrm
 
-#endif // JSON_RENDERER_HPP
+#endif // OBJC_RENDERER
 
 void objCRender(NSMutableDictionary *out, const osrm::util::json::Object &object)
 {
